@@ -28,3 +28,8 @@ def predict_species(data: IrisInput):
     return {
         "predicted_class": prediction
     }
+
+@app.get("/status")
+def get_status():
+    return {"status": "running", "version": "2.0", "auto_deployed": True}
+
